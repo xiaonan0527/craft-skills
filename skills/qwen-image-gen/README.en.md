@@ -6,7 +6,7 @@
 
 An experimental Agent workflow for an existing Qwen-Image setup: preserve user intent, distinguish local edits from reference-guided creation, translate aspect-ratio decisions into backend parameters, and inspect actual outputs.
 
-**v0.1.0 experimental candidate.** Your current Agent performs the rewrite. Image generation requires your own authorized connection; this package does not download models or provide a universal online client.
+**v0.3.0 experimental.** Your current Agent performs the rewrite. The package includes an optional local ComfyUI Qwen Image 2.1 text-to-image client; it still requires your own models and running ComfyUI server.
 
 ## Images and their prompts
 
@@ -77,6 +77,8 @@ These research examples informed the Skill. They do not establish a general win 
 Request → task selection → prompt and canvas decision → existing Qwen workflow → original-output inspection → defect-guided revision.
 
 The current Agent rewrites prompts; reference tasks need visual understanding. No additional large model download is required. Application developers may use the optional offline request builder or shared runtime.
+
+For local ComfyUI text-to-image, use `scripts/run_comfyui.py`. It preflights nodes and model filenames, submits the API workflow, follows the same task ID, and can download original outputs through `/view`. Configure the server with `COMFYUI_URL` or `--server`; see [Local ComfyUI execution](references/comfyui-local.md).
 
 ## Documentation and limits
 

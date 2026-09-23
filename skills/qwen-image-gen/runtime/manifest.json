@@ -1,10 +1,12 @@
 {
   "schemaVersion": 1,
   "id": "qwen-image-gen",
-  "version": "0.2.1",
+  "version": "0.3.0",
   "instructionFiles": [
     "SKILL.md",
     "references/rewriting.md",
-    "references/tested-behavior.md"
+    "references/tested-behavior.md",
+    "references/integration.md",
+    "references/comfyui-local.md"
   ]
 }

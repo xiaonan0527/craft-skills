@@ -38,6 +38,8 @@ description: 为 Qwen-Image 编写和改写生图提示词，区分局部编辑�
 
 使用用户指定且已有的 Qwen 入口，沿用当前授权。先读 [integration.md](references/integration.md)，核对实际接口：是否支持参考图、多图、显式宽高和原生 Alpha。模型有某能力，不代表当前封装已经接入。
 
+用户要求通过本地 ComfyUI 文生图时，再读 [comfyui-local.md](references/comfyui-local.md)。优先使用 `scripts/run_comfyui.py` 和内置 API 工作流；先预检节点与模型，再提交并跟踪同一个任务 ID。用户已有工作流与内置模板不一致时，以实际导出的 API 工作流为准，不猜节点映射。
+
 本 Skill 不预置服务器地址或密钥，也不默认下载模型。没有生成连接时仍可交付提示词；不能把“已准备请求”说成“已生成”。
 
 应用需要加载同一份版本化规则时，读 [shared-runtime.md](references/shared-runtime.md)。可选 Node.js 模块只构造规划消息、校验结构和整理质量反馈，不联网、不执行生成；普通 Agent 无需运行它。

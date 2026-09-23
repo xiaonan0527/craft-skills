@@ -20,7 +20,7 @@ test('bundle is deterministic across location and changes when exact guidance by
   const { dir } = fixture(t);
   const original = loadSkillBundle(skill);
   const copied = loadSkillBundle(dir);
-  assert.equal(original.version, '0.2.1');
+  assert.equal(original.version, '0.3.0');
   assert.equal(original.digest, copied.digest);
   assert.ok(original.files.every(file => file.bytes > 0 && /^[a-f0-9]{64}$/.test(file.sha256)));
   const path = join(dir, 'references/rewriting.md');
